@@ -2,7 +2,7 @@ let editor
 
 function initializeEditor() {
     editor = ace.edit("editor")
-    editor.setTheme("ace/theme/terminal");
+    editor.setTheme("ace/theme/cobalt");
     editor.session.setMode("ace/mode/text");
     editor.setOption("wrap", 80)
     editor.setFontSize(16)
