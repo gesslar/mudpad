@@ -9,7 +9,7 @@ const wrapify = (text = "", maxLineLength = 80, indent = 3) => {
     let parseParagraphs = parts
         .reduce((result, part) => {
             const wrapped = wrapParagraph(part, maxLineLength, indent);
-            return result + `\n${"".padStart(indent)}${wrapped}\n`;
+            return result + `\n\n${"".padStart(indent)}${wrapped}`;
         }, "");
 
     while(parseParagraphs.startsWith("\n")) {

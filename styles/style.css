@@ -23,8 +23,9 @@
 }
 
 .btn {
-    color-scheme: dark;
+    background-color: green;
+    color: white ;
     font-size: large;
     border-radius: 3px;
-    border-color: grey;
+    font-size: large;
 }
