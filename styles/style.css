@@ -1,6 +1,7 @@
 body {
     color-scheme: dark;
     background-color: darkgoldenrod;
+    padding: 2ch;
 }
 
 #editor {
@@ -46,4 +47,21 @@ body {
     font-size: large;
     font-family: Arial, Helvetica, sans-serif;
     height: 2em; 
+}
+
+#github {
+    position: absolute;
+    bottom: 10px ;
+    background-color: rgb(182, 143, 45) ;
+    border: 1px solid rgba(119, 86, 4, 0.5) ;
+    border-radius: .5ch;
+    width: 95% ;
+    height: 25px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#github a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
 }
