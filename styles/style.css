@@ -13,3 +13,18 @@
     display:inline-block;
     position:relative;
 }
+
+#toolbar {
+    text-align: right;
+    width:800px;
+    display:inline-block;
+    position:relative;
+    margin-bottom: 2px;
+}
+
+.btn {
+    color-scheme: dark;
+    font-size: large;
+    border-radius: 3px;
+    border-color: grey;
+}
