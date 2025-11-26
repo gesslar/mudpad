@@ -2,27 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MudPad - Text Wrapping for Muds</title>
-    <script src="ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script src="https://github.com/gesslar/wrapify/releases/download/v1.0/wrapify.js" type="text/javascript" charset="utf-8" defer></script>
-    <script src="scripts/mudpad.js"></script>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MudPad - Text Wrapping for Muds</title>
+  <script src="https://github.com/gesslar/wrapify/releases/download/v1.0/wrapify.js" type="text/javascript"
+    charset="utf-8" defer></script>
+  <script src="scripts/mudpad.js" type="module"></script>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <div id="toolbar">
-        <h3 id="instructions">Type or paste your text below and then click</h3>
-        <button type="button" class="btn" id="wrap" onclick="wrapIt()">Wrap It Up!</button>
+  <header>
+
+  </header>
+  <div id="toolbar">
+    <h3 id="instructions">Type or paste your text below and then click</h3>
+    <button type="button" class="btn" id="wrap" onclick="wrapIt()">Wrap It Up!</button>
+  </div>
+  <main>
+    <div>
+      <div id="container"></div>
     </div>
-    <div id="parent">
-        <div id="editor"></div>
+  </main>
+
+  <footer>
+    <div id="github"><a href="https://github.com/gesslar/mudpad" target="_blank">Click here to visit this project on
+        GitHub</a>
     </div>
-    <script>initializeEditor()</script>
-    <div id="github"><a href="https://github.com/gesslar/mudpad" target="_blank">Click here to visit this project on GitHub</a>
-    </div>
+  </footer>
+
 </body>
 
 </html>
