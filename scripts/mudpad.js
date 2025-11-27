@@ -1,4 +1,5 @@
-import { init } from 'https://esm.sh/modern-monaco';
+import {init} from "https://esm.sh/modern-monaco"
+import wrapify from "https://esm.sh/@gesslar/wrapify"
 
 let editor;
 
@@ -13,7 +14,7 @@ async function initializeEditor() {
     minimap: { enabled: false },
     scrollBeyondLastLine: false,
     contextmenu: false,
-    tabSize: 2,
+    tabSize: 3,
     insertSpaces: true,
     renderLineHighlight: 'none',
   });
@@ -27,8 +28,6 @@ function wrapIt() {
 window.initializeEditor = initializeEditor;
 window.wrapIt = wrapIt;
 
-window.addEventListener('DOMContentLoaded', () => {
-  initializeEditor().catch((error) => {
-    console.error('Failed to initialize Monaco', error);
-  });
-});
+window.addEventListener("DOMContentLoaded", () => {
+  initializeEditor().catch(error => console.error("Failed to initialize Monaco", error))
+})
