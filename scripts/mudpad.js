@@ -1,32 +1,34 @@
 import {init} from "https://esm.sh/modern-monaco"
 import wrapify from "https://esm.sh/@gesslar/wrapify"
 
-let editor;
+let editor
 
 async function initializeEditor() {
-  const monaco = await init();
-  editor = monaco.editor.create(document.getElementById('container'), {
-    value: '',
-    language: 'plaintext',
-    theme: 'vs-dark',
+  const monaco = await init()
+  editor = monaco.editor.create(document.getElementById("container"), {
+    value: "",
+    language: "plaintext",
+    theme: "vs-dark",
     glyphMargin: false,
-    lineNumbers: 'off',
-    minimap: { enabled: false },
+    lineNumbers: "off",
+    minimap: {enabled: false},
     scrollBeyondLastLine: false,
     contextmenu: false,
     tabSize: 3,
     insertSpaces: true,
-    renderLineHighlight: 'none',
-  });
+    renderLineHighlight: "none",
+  })
 }
 
 function wrapIt() {
-  if (!editor || typeof wrapify !== 'function') return;
-  editor.setValue(wrapify(editor.getValue(), 80, 0));
+  if(!editor || typeof wrapify !== "function")
+    return
+
+  editor.setValue(wrapify(editor.getValue(), 80, 0))
 }
 
-window.initializeEditor = initializeEditor;
-window.wrapIt = wrapIt;
+window.initializeEditor = initializeEditor
+window.wrapIt = wrapIt
 
 window.addEventListener("DOMContentLoaded", () => {
   initializeEditor().catch(error => console.error("Failed to initialize Monaco", error))
